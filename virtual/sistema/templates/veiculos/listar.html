@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lista de veículos cadastrados</title>
+  </head>
+  <body>
+    <ul>
+      {% for veiculo in object_list %}
+        <li>
+          <a href="/veiculos/{{veiculo.pk}}">
+          {{ veiculo }}<p/>
+          </a>
+
+          <a href="/veiculos/excluir/{{veiculo.pk}}">
+            <input type="button" value="Apagar" />
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
